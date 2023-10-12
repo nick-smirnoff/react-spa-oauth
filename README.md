@@ -22,4 +22,7 @@ This is a basic identity server with in-memory stores and test users.
 
 ### `demo.react.oidc.app`
 
-This is a basic create-react-app which demonstrates an OAuth implementation via the libraries; [`oidc-client-ts`](https://authts.github.io/oidc-client-ts/) and [`react-oidc-context`](https://github.com/authts/react-oidc-context#documentation).
+This is a basic create-react-app which demonstrates an OAuth implementation via the libraries;
+
+- [`oidc-client-ts`](https://authts.github.io/oidc-client-ts/)
+- [`react-oidc-context`](https://github.com/authts/react-oidc-context#documentation).
