@@ -1,6 +1,4 @@
-using Demo.IdentityServer.Web;
 using Duende.IdentityServer;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Serilog;
 
 namespace Demo.IdentityServer.Web
@@ -54,6 +52,10 @@ namespace Demo.IdentityServer.Web
                     options.ClientSecret = "copy client secret from Google here";
                 });
 
+
+
+            builder.Services.AddCors();
+
             return builder.Build();
         }
 
@@ -68,6 +70,13 @@ namespace Demo.IdentityServer.Web
 
             app.UseStaticFiles();
             app.UseRouting();
+            app.UseCors(cors =>
+            {
+                cors.AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .SetIsOriginAllowed(origin => true)
+                    .AllowCredentials();
+            });
             app.UseIdentityServer();
             app.UseAuthorization();
 

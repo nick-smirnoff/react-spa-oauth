@@ -9,6 +9,9 @@ namespace Demo.IdentityServer.Web
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
+                new IdentityResources.Address(),
+                new IdentityResources.Email(),
+                new IdentityResources.Phone(),
             };
 
         public static IEnumerable<ApiScope> ApiScopes =>
@@ -24,16 +27,29 @@ namespace Demo.IdentityServer.Web
                 new Client
                 {
                     ClientId = "demo.react.app",
-
                     AllowedGrantTypes = GrantTypes.Code,
                     RequirePkce = true,
-
-                    RedirectUris = { "https://localhost:44300/signin-oidc" },
-                    FrontChannelLogoutUri = "https://localhost:44300/signout-oidc",
-                    PostLogoutRedirectUris = { "https://localhost:44300/signout-callback-oidc" },
-
+                    RequireClientSecret = false,
+                    RedirectUris =
+                    {
+                        "https://localhost:3000/signin-oidc",
+                        "https://localhost:3000/signout-callback-oidc"
+                    },
+                    FrontChannelLogoutUri = "https://localhost:3000/signout-oidc",
+                    PostLogoutRedirectUris = {
+                        "https://localhost:3000/signout-callback-oidc"
+                    },
                     AllowOfflineAccess = true,
-                    AllowedScopes = { "openid", "profile", "scope2" }
+                    AllowedScopes = {
+                        "offline_access",
+                        "openid",
+                        "profile",
+                        "address",
+                        "email",
+                        "phone",
+                        "demo.read",
+                        "demo.write"
+                    }
                 },
             };
     }
