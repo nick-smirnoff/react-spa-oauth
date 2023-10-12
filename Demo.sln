@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7DDB0654-F31
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.IdentityServer.Web", "src\Demo.IdentityServer.Web\Demo.IdentityServer.Web.csproj", "{66096BAE-22B8-42E3-9D81-EB0B8D72AE34}"
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "demo.oauth.react.app", "src\demo.oauth.react.app\demo.oauth.react.app.esproj", "{035067F5-46F4-41E3-8376-F66D4AE19709}"
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "demo.react.oidc.app", "src\demo.react.oidc.app\demo.react.oidc.app.esproj", "{035067F5-46F4-41E3-8376-F66D4AE19709}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

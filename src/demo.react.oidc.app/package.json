@@ -1,5 +1,5 @@
 {
-  "name": "demo.oauth.react.app",
+  "name": "demo.react.oidc.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
