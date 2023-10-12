@@ -1,0 +1,2 @@
+start cmd.exe /C "cd ../src/Demo.IdentityServer.Web & title Demo.IdentityServer.Web & dotnet run"
+start cmd.exe /C "cd ../src/demo.react.oidc.app & title demo.react.oidc.app & npm install & npm run start"
